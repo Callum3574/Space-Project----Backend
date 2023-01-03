@@ -9,7 +9,7 @@ import requests
 import bcrypt
 
 app = Flask(__name__)
-CORS(app, origins='https://space-explorer-nasa.netlify.app/')
+CORS(app, origins=['https://space-explorer-nasa.netlify.app'])
 
 
 PASS=os.getenv('PASS')
@@ -117,7 +117,7 @@ def sign_in():
 
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0', port=port)
+    app.run(debug=True,host='0.0.0.0' , port=port)
 
 
 
