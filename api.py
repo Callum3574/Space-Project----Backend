@@ -9,7 +9,7 @@ import requests
 import bcrypt
 
 app = Flask(__name__)
-CORS(app, origins='http://localhost:3000')
+CORS(app, origins='https://space-explorer-nasa.netlify.app/')
 
 
 PASS=os.getenv('PASS')
