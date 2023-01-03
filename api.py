@@ -14,6 +14,7 @@ CORS(app, origins='http://localhost:3000')
 
 PASS=os.getenv('PASS')
 HOST=os.getenv('HOST')
+port = os.environ['PORT']
 
 
 def get_db_user_connection():
@@ -116,7 +117,7 @@ def sign_in():
 
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0')
+    app.run(debug=True,host='0.0.0.0', port=port)
 
 
 
