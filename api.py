@@ -26,7 +26,7 @@ port = os.environ['PORT']
 def get_db_user_connection():
     try:
         # Use environment variables to build connection string
-        conn_string = f"dbname={DB_USERNAME} user={DB_USERNAME} host={DB_HOST} port={DB_PORT} password={DB_PASSWORD}"
+        conn_string = f"dbname={DB_USERNAME} user={DB_USERNAME} host={DB_HOST} password={DB_PASSWORD}"
         conn = psycopg2.connect(conn_string)
         return conn
     except Exception as e:
